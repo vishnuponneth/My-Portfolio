@@ -1,14 +1,412 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Meyawo landing page.">
+    <meta name="author" content="Devcrud">
     <title>Vishnu P</title>
-  </head>
-  <body>
-    <div id="root"></div>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + Meyawo main styles -->
+	<link rel="stylesheet" href="assets/css/meyawo.css">
+<style>
+    /* Section Styling */
+
+/* General Section Styling */
+.section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Experience and Project Items */
+.experience-item,
+.project-item {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover,
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Titles and Details */
+.company-name,
+.project-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.location,
+.project-duration {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.role,
+.project-details {
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.8;
+}
+
+/* Icons */
+.project-title i,
+.company-name i {
+  color: #2575fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .company-name,
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .role,
+  .project-details {
+    font-size: 1rem;
+  }
+}
+
+    .section {
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    }
     
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    .section-title {
+      font-size: 2.8rem;
+      font-weight: bold;
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      -webkit-background-clip: text;
+      /* Standard background-clip property */
+background-clip: text;
+
+/* Vendor-prefixed versions for compatibility */
+-webkit-background-clip: text; /* Safari, Chrome, newer versions of Opera */
+-moz-background-clip: text;     /* Firefox (though not widely supported) */
+
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+    
+    /* Card Styling */
+    .card {
+      border-radius: 20px;
+      background: #ffffff;
+      overflow: hidden;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Service Card Styling */
+    .service-card {
+      background: linear-gradient(135deg, #ffffff, #f2f2f2);
+    }
+    
+    .card-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #333333;
+    }
+    
+    /* Icon Styling */
+    .icon-wrapper {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #fff;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      border-radius: 50%;
+      margin: 0 auto;
+      font-size: 2rem;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* List Styling */
+    ul.list-unstyled {
+      margin-top: 20px;
+      font-size: 1.2rem;
+    }
+    
+    ul.list-unstyled li {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    
+    ul.list-unstyled i {
+      font-size: 1.2rem;
+    }
+    
+    /* Hover Animation */
+    .service-card:hover .icon-wrapper {
+      transform: scale(1.1);
+      transition: transform 0.4s ease;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card-title {
+        font-size: 1.5rem;
+      }
+    
+      .section-title {
+        font-size: 2.2rem;
+      }
+    }
+    
+</style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">VISHNU P</a>         
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#testmonial">Testmonial</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#blog">Blog</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+                <li class="item ml-md-3">
+                    <a href="components.html" class="btn btn-primary">Components</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>          
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Vishnu P</span>
+            </h1>
+            
+        </div>              
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/vishnu.jpg" class="about-img" alt="vishnu">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        Electronics and Communication graduate with strong passion for front end development. Proficient in HTML, CSS,
+JavaScript and React. <br>I am commited to continuous learning and staying updated with industry trends and best
+practices.             
+                    </p><a href="assets/cv/Vishnu P_Resume.pdf" download="vishnu.pdf">
+                        <button class="btn-rounded btn btn-outline-primary mt-4">Download Resume</button>
+                      </a>
+                      
+                </div>              
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <section class="section" id="service">
+        <div class="container text-center">
+          <p class="section-subtitle text-muted">What Am I Skilled At?</p>
+          <h2 class="section-title gradient-text mb-6">Skills</h2>
+      
+          <!-- Skills and Communication Section -->
+          <div class="row justify-content-center">
+            <!-- Skills Card -->
+            <div class="col-lg-5 mb-5">
+              <div class="card shadow-lg border-0 service-card">
+                <div class="card-body">
+                  <div class="icon-wrapper mb-4">
+                    <i class="fas fa-laptop-code"></i>
+                  </div>
+                  <h4 class="card-title gradient-text">Skills</h4>
+                  <ul class="list-unstyled mt-4">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> HTML, CSS, JavaScript</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> React JS, C, C++, OOP</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Python, SQL</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Adobe Premiere Pro, After Effects</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Photography, Cinematography</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+      
+            <!-- Communication Card -->
+            <div class="col-lg-5 mb-5">
+              <div class="card shadow-lg border-0 service-card">
+                <div class="card-body">
+                  <div class="icon-wrapper mb-4">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <h4 class="card-title gradient-text">Communication</h4>
+                  <ul class="list-unstyled mt-4">
+                    <li><i class="fas fa-check-circle text-success me-2"></i> English</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Malayalam</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Hindi</li>
+                    <li><i class="fas fa-check-circle text-success me-2"></i> Tamil</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+              
+    
+
+
+    <section class="section" id="technical-experience">
+        <div class="container">
+          <h2 class="section-title gradient-text text-center">Technical Experience</h2>
+          
+          <!-- Experience 1: Digitoad Technologies -->
+          <div class="experience-item">
+            <h4 class="company-name"><i class="fas fa-building me-2"></i> Industrial Internship</h4>
+            <p class="location text-muted">Digitoad Technologies, Banaswadi, Banguluru</p>
+            <p class="role">Embedded AI Developer</p>
+            <p class="experience-duration text-muted">Duration: Sep 2023 - Apr 2024</p>
+            <ul class="details-list">
+              <li>embedded C</li>
+              <li>Cube IDE</li>
+              <li>NanoEdge AI</li>
+            </ul>
+          </div>
+          <div class="experience-item">
+            <h4 class="company-name"><i class="fas fa-building me-2"></i> Tutor</h4>
+            <p class="location text-muted">Basic coding Tutoring for first year UG Engineering students C, C++, OOP </p>
+            
+            <p class="experience-duration text-muted">Duration: Jun 2022 - Sep 2023</p>
+            
+          </div>
+        </div>
+      </section>
+      <section class="section" id="technical-experience">
+    
+        <!-- Projects Section -->
+        <div class="container mt-5">
+          <h2 class="section-title gradient-text text-center">Projects</h2>
+      
+          <!-- Project 1: Testbench Automation -->
+          <div class="project-item">
+            <h4 class="project-title"><i class="fas fa-cogs me-2"></i> Testbench Automation</h4>
+            <p class="project-duration text-muted">Sep 2023 - Apr 2024</p>
+            <p class="project-details">
+              Implemented a 32-bit MIPS Microprocessor along with Python scripts to automate the testbench process, improving efficiency and reducing human error.
+            </p>
+          </div>
+      
+          <!-- Project 2: Designing Rover -->
+          <div class="project-item">
+            <h4 class="project-title"><i class="fas fa-robot me-2"></i> Designing Rover</h4>
+            <p class="project-duration text-muted">May 2022 - Aug 2022</p>
+            <p class="project-details">
+              Designed and developed an autonomous rover for the AR/VR Lab at CUSAT using Python, VS Code, and Raspberry Pi, incorporating navigation algorithms for obstacle avoidance.
+            </p>
+          </div>
+      
+          <!-- Project 3: Smart Bin -->
+          <div class="project-item">
+            <h4 class="project-title"><i class="fas fa-trash-alt me-2"></i> Smart Bin</h4>
+            <p class="project-duration text-muted">May 2023 - Aug 2023</p>
+            <p class="project-details">
+              Developed a smart dustbin system using Python, Raspberry Pi, and Teachable Machines. The system automatically classifies waste into different categories using machine learning and image classification.
+            </p>
+          </div>
+      
+        </div>
+      </section>
+      
+   
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">       
+            <p class="mb-0">Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.vishnuponneth.com">Vishnuponneth</a></p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="javascript:void(0)" class="link"><i class="ti-facebook"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-google"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-pinterest-alt"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-instagram"></i></a>
+                <a href="javascript:void(0)" class="link"><i class="ti-rss"></i></a>
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+	
+	<!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
+    <script src="assets/js/meyawo.js"></script>
+
+</body>
 </html>
